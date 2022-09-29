@@ -16,7 +16,7 @@ let socket = null;
 export const connectWithSocketServer = (userDetails) => {
     const jwtToken = userDetails.token;
     
-    socket = io('http://localhost:3100',{
+    socket = io('ws://chating-chating.herokuapp.com/?EIO=4&transport=websocket',{
         auth: {
             token: jwtToken,
         },
