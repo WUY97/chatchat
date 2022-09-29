@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.19.1"
+  },
   "scripts": {
     "heroku-postbuild": "cd ./frontend/ && npm install && npm run build",
     "backend": "cd ./backend/ && nodemon server.js ",
