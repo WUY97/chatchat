@@ -3,7 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
-
+const path = require('path');
 const socketServer = require('./socketServer');
 const authRoutes = require('./routes/authRoutes');
 const friendInvitationRoutes = require('./routes/friendInvitationRoutes');
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, "../frontend/build")));
+    app.use(express.static(path.join(__dirname,"../frontend/build")));
 
     app.get('*', (req, res) => {
         res.sendFile(
