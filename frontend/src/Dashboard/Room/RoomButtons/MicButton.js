@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import IconButton from '@material-ui/core/IconButton';
-import MicIcon from '@material-ui/icons/Mic';
-import MicOffIcon from '@material-ui/icons/MicOff';
+import IconButton from '@mui/material/IconButton';
+import MicIcon from '@mui/icons-material/Mic';
+import MicOffIcon from '@mui/icons-material/MicOff';
 
 const MicButton = ({ localStream }) => {
     const [micEnabled, setMicEnabled] = useState(true);

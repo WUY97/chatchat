@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 
 import Avatar from '../../shared/components/Avatar';
 import * as roomHandler from '../../realtimeCommunication/roomHandler';

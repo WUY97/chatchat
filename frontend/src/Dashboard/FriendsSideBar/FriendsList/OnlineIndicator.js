@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box } from '@mui/material';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 const OnlineIndicator = () => {
     return (

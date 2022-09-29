@@ -1,8 +1,8 @@
 import React from 'react';
-import CheckIcon from '@material-ui/icons/Check';
-import ClearIcon from '@material-ui/icons/Clear';
-import Box from '@material-ui/core/Box';
-import IconButton from '@material-ui/core/IconButton';
+import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
 
 const InvitationDecisionButtons = ({
     disabled,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Tooltip } from '@mui/material'
 import { Typography } from '@mui/material';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 import { connect } from 'react-redux';
 
 import Avatar from '../../../shared/components/Avatar';

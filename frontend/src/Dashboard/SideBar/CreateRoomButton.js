@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from '@mui/icons-material/Add';
 
 import * as roomHandler from '../../realtimeCommunication/roomHandler';
 

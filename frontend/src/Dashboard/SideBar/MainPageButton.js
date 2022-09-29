@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import GroupIcon from '@material-ui/icons/Group';
+import GroupIcon from '@mui/icons-material/Group';
 
 const MainPageButton = () => {
     return (

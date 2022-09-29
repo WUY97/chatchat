@@ -1,8 +1,8 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import IconButton from '@material-ui/core/IconButton';
-import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
-import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import IconButton from '@mui/material/IconButton';
+import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
 
 
 const MainContainer = styled('div')({
