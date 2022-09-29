@@ -16,7 +16,7 @@ const postLogin = async (req, res) => {
                 userId: user._id,
                 mail,
                 },
-                process.env.TOKEN_KEY,
+                process.env.REACT_APP_TOKEN_KEY,
                 {
                     expiresIn:'24h',
                 }
