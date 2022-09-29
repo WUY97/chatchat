@@ -2,7 +2,7 @@ import axios from 'axios';
 import { logout } from '../src/shared/utils/auth';
 
 const apiClient = axios.create({
-    baseURL: process.env.PORT || "http://localhost.5002/api",
+    baseURL: process.env.PORT || "http://localhost:3100",
     timeout: 10000,
 });
 
@@ -26,7 +26,7 @@ apiClient.interceptors.request.use(
 
 export const login = async (data) => {
     try {
-        return await apiClient.post('/auth/login',data);
+        return await apiClient.post('api/auth/login',data);
     } catch (exception) {
         return {
             error: true,
@@ -37,7 +37,7 @@ export const login = async (data) => {
 
 export const register = async (data) => {
     try {
-        return await apiClient.post('/auth/register',data);
+        return await apiClient.post('api/auth/register',data);
     } catch (exception) {
         return {
             error: true,
@@ -49,7 +49,7 @@ export const register = async (data) => {
 // secure routes
 export const sendFriendInvitation = async (data) => {
     try {
-        return await apiClient.post("/friend-invitation/invite", data);
+        return await apiClient.post("api/friend-invitation/invite", data);
     } catch (exception) {
         checkResponseCode(exception);
         return {
@@ -61,7 +61,7 @@ export const sendFriendInvitation = async (data) => {
 
 export const acceptFriendInvitation = async (data) => {
     try {
-        return await apiClient.post("/friend-invitation/accept",data)
+        return await apiClient.post("api/friend-invitation/accept",data)
     } catch (exception) {
         checkResponseCode(exception);
         return {
@@ -73,7 +73,7 @@ export const acceptFriendInvitation = async (data) => {
 
 export const rejectFriendInvitation = async (data) => {
     try {
-        return await apiClient.post("/friend-invitation/reject",data)
+        return await apiClient.post("api/friend-invitation/reject",data)
     } catch (exception) {
         checkResponseCode(exception);
         return {
