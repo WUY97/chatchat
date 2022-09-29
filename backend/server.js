@@ -14,6 +14,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// register the routes
+app.use('/api/auth', authRoutes);
+app.use('/api/friend-invitation', friendInvitationRoutes);
+
+const server = http.createServer(app);
+socketServer.registerSocketServer(server);
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname,"../frontend/build")));
 
@@ -23,13 +30,6 @@ if (process.env.NODE_ENV === 'production') {
         );
     });
 }
-
-// register the routes
-app.use('/api/auth', authRoutes);
-app.use('/api/friend-invitation', friendInvitationRoutes);
-
-const server = http.createServer(app);
-socketServer.registerSocketServer(server);
 
 mongoose
     .connect(process.env.REACT_APP_MONGO_URI)
