@@ -13,10 +13,13 @@ import * as webRTCHandler from './webRTCHandler';
 
 let socket = null;
 
+const IS_PROD = process.env.NODE_ENV === "production";
+const URL = IS_PROD ? "chating-chating.herokuapp.com" : "http://localhost:3100";
+
 export const connectWithSocketServer = (userDetails) => {
     const jwtToken = userDetails.token;
     
-    socket = io('ws://chating-chating.herokuapp.com/?EIO=4&transport=websocket',{
+    socket = io(URL,{
         auth: {
             token: jwtToken,
         },
